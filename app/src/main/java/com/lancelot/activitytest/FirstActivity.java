@@ -2,7 +2,7 @@ package com.lancelot.activitytest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.view.*;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -21,5 +21,27 @@ public class FirstActivity extends AppCompatActivity {
                 Toast.makeText(FirstActivity.this, "You clicked Button1", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main,menu);
+        return true;
+    }
+
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.app_item:
+                Toast.makeText(this, "You clicked Add", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.remove_item:
+                Toast.makeText(this, "You clicked Remove", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+        }
+        return true;
     }
 }
