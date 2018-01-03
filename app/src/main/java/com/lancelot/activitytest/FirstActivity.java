@@ -1,5 +1,6 @@
 package com.lancelot.activitytest;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.*;
@@ -19,7 +20,9 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
 //                Toast.makeText(FirstActivity.this, "You clicked Button1", Toast.LENGTH_SHORT).show();
-                finish();
+//                finish();
+                Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
+                startActivity(intent);
             }
         });
     }
