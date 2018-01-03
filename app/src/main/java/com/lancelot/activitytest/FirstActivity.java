@@ -1,6 +1,7 @@
 package com.lancelot.activitytest;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.*;
@@ -22,8 +23,10 @@ public class FirstActivity extends AppCompatActivity {
 //                Toast.makeText(FirstActivity.this, "You clicked Button1", Toast.LENGTH_SHORT).show();
 //                finish();
 //                Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
-                Intent intent = new Intent("com.lancelot.activitytest.ACTION_START");
-                intent.addCategory("com.lancelot.activitytest.MY_CATEGORY");
+//                Intent intent = new Intent("com.lancelot.activitytest.ACTION_START");
+//                intent.addCategory("com.lancelot.activitytest.MY_CATEGORY");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.baidu.com"));
                 startActivity(intent);
             }
         });
