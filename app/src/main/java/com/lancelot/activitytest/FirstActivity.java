@@ -23,6 +23,7 @@ public class FirstActivity extends AppCompatActivity {
 //                finish();
 //                Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
                 Intent intent = new Intent("com.lancelot.activitytest.ACTION_START");
+                intent.addCategory("com.lancelot.activitytest.MY_CATEGORY");
                 startActivity(intent);
             }
         });
