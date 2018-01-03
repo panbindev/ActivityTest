@@ -21,7 +21,8 @@ public class FirstActivity extends AppCompatActivity {
             public void onClick(View v){
 //                Toast.makeText(FirstActivity.this, "You clicked Button1", Toast.LENGTH_SHORT).show();
 //                finish();
-                Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
+//                Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
+                Intent intent = new Intent("com.lancelot.activitytest.ACTION_START");
                 startActivity(intent);
             }
         });
